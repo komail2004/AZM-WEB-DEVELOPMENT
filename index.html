@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mkomail</title>
+    <!--Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Ubuntu:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/d610d9a482.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Navbar-->
+
+    <nav
+      class="navbar navbar-dark navbar-expand-lg sticky-top bg-dark flex-md-nowrap p-0 shadow"
+    >
+      <a class="navbar-brand mr-0 px-3" href="#">MK</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <input
+          class="form-control form-control-dark w-100 my-2 my-lg-0 mr-sm-2"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <ul class="navbar-nav px-3 mr-auto mt-2 mt-lg-0">
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">پست جدید </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Content+Sidebar-->
+
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <div class="row">
+            <!--Text box-->
+            <div class="text-area" style="margin: auto; padding-top: 10px">
+              <form style="padding-top: 20px">
+                <div
+                  id="textbox"
+                  class="form-group d-flex justify-content-end"
+                  style="padding-left: 80px"
+                  dir="rtl"
+                >
+                  <!--Post-Title-->
+                  <label
+                    for="exampleFormControlInput1"
+                    style="padding-left: 20px"
+                    >موضوع
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="posttitle"
+                    placeholder="موضوع خود را اینحا وارد کنید"
+                  />
+                </div>
+                <div
+                  class="form-group d-flex justify-content-end"
+                  style="padding-left: 40px; margin-bottom: -10px"
+                  dir="rtl"
+                >
+                  <label
+                    for="exampleFormControlSelect1 "
+                    style="padding-left: 15px; white-space: nowrap"
+                    >دسته بندی</label
+                  >
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>سوال شما</option>
+                    <option>تکنالوجی</option>
+                    <option>سفر</option>
+                    <option>فیلم</option>
+                    <option>هنر</option>
+                    <option>خرید</option>
+                    <option>آموزش</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"></label>
+                  <textarea
+                    class="form-control"
+                    id="text-box"
+                    dir="rtl"
+                    rows="5"
+                    cols="100"
+                  >
+                  </textarea>
+
+                 
+
+                  <label
+                    class="btn btn-secondary"
+                    style="
+                      float: right;
+                      margin-bottom: 18px;
+                      margin-top: 3px;
+                      margin-left: 8px;
+                    "
+                    for="image-post"
+                  >
+                  <i class="fas fa-images"></i><input id="image-post" name="image-post" type="file" hidden />
+                  
+                  </label>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="addpost()"
+                    style="float: right; margin-bottom: 18px; margin-top: 3px"
+                  >
+                    پوست
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-lg-10 col-md-9 bg-dark d-flex justify-content-center"
+              style="margin: auto"
+            >
+              <ul class="col-lg-10 col-md-9 nav justify-content-between d-flex">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fab fa-hotjar fa-2x"></i> داغ ترین ها</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-star fa-2x"></i> جدید ترین ها</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fas fa-level-up-alt fa-2x"></i>برترین ها</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+          <div class="row">
+            <div
+              id="all-posts"
+              class="col-lg-10 col-md-9 d-flex justify-content-center"
+              style="margin: auto"
+            >
+              <ul
+                class="col-lg-10 col-md-9 justify-content-center"
+                style="list-style: none"
+              >
+                <li>
+                  <!--Title-->
+                  <h2 id="title-text" class="text-center"></h2>
+                </li>
+                <!--Text Box-->
+                <li>
+                  <p id="textofbox" class="text-right"></p>
+                </li>
+                <li>
+                  <p id="image-box"><img id="post-image" src="#" alt=""></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="sidebar-sticky pt-3">
+            <h6>به چی علاقمند هستی ؟</h6>
+            <ul class="nav flex-column" style="margin-left: 50px">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  ><i class="fas fa-laptop"></i> تکنالوجی
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-heartbeat"></i>
+                  سلامت
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-route"></i>
+                  سفر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-film"></i>
+                  فیلم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-palette"></i>
+                  هنر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-shopping-cart"></i>
+                  خرید
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-book-open"></i>
+                  آموزش
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!--Javascript-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>'
+        );
+    </script>
+    <script
+      src="/docs/4.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
