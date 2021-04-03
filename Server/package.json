@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.2"
+  },
+  "name": "mongoose",
+  "version": "1.0.0",
+  "main": "test_insert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "2.2.1"
+  }
+}
