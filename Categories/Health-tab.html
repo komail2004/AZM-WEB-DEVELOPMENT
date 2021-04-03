@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Mkomail</title>
+    <title>Health</title>
     <!--Google fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Ubuntu:ital,wght@1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet"> 
     <!--Stylesheet-->
     <link
       rel="stylesheet"
@@ -74,13 +76,16 @@
       </div>
     </nav>
 
-    <!--Content+Sidebar-->
-
+    <!--Icon-->
+    <i class="fas fa-heartbeat" style="font-size: 4em; margin-top: 20px; margin-left: 500px;" >
+    </i>
+    <!--Text-->
+    <h2 style="font-family: 'Balsamiq Sans', cursive;; position: relative; left: 600px; bottom: 45px;">HEALTH</h2>  
+    
     <div class="container-fluid">
       <div class="row">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div class="row">
-            <!--Text box-->
             <div class="text-area" style="margin: auto; padding-top: 10px">
               <form style="padding-top: 20px">
                 <div
@@ -88,74 +93,14 @@
                   class="form-group d-flex justify-content-end"
                   style="padding-left: 80px"
                   dir="rtl"
-                >
-                  <!--Post-Title-->
-                  <label
-                    for="exampleFormControlInput1"
-                    style="padding-left: 20px"
-                    >موضوع
-                  </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="posttitle"
-                    placeholder="موضوع خود را اینحا وارد کنید"
-                  />
+                > 
                 </div>
                 <div
                   class="form-group d-flex justify-content-end"
                   style="padding-left: 40px; margin-bottom: -10px"
                   dir="rtl"
                 >
-                  <label
-                    for="exampleFormControlSelect1 "
-                    style="padding-left: 15px; white-space: nowrap"
-                    >دسته بندی</label
-                  >
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>سوال شما</option>
-                    <option>تکنالوجی</option>
-                    <option>سفر</option>
-                    <option>فیلم</option>
-                    <option>هنر</option>
-                    <option>خرید</option>
-                    <option>آموزش</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1"></label>
-                  <textarea
-                    class="form-control"
-                    id="text-box"
-                    dir="rtl"
-                    rows="5"
-                    cols="100"
-                  >
-                  </textarea>
-
-                 
-
-                  <label
-                    class="btn btn-secondary"
-                    style="
-                      float: right;
-                      margin-bottom: 18px;
-                      margin-top: 3px;
-                      margin-left: 8px;
-                    "
-                    for="image-post"
-                  >
-                  <i class="fas fa-images"></i><input id="image-post" name="image-post" type="file" hidden />
-                  
-                  </label>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    onclick="addpost()"
-                    style="float: right; margin-bottom: 18px; margin-top: 3px"
-                  >
-                    پوست
-                  </button>
+           
                 </div>
               </form>
             </div>
@@ -164,7 +109,7 @@
           <div class="row">
             <div
               class="col-lg-10 col-md-9 bg-dark d-flex justify-content-center"
-              style="margin: auto"
+              style="margin-left: 120px; margin-top: -50px;"
             >
               <ul class="col-lg-10 col-md-9 nav justify-content-between d-flex">
                 <li class="nav-item">
@@ -197,17 +142,7 @@
                 class="col-lg-10 col-md-9 justify-content-center"
                 style="list-style: none"
               >
-                <li>
-                  <!--Title-->
-                  <h2 id="title-text" class="text-center"></h2>
-                </li>
-                <!--Text Box-->
-                <li>
-                  <p id="textofbox" class="text-right"></p>
-                </li>
-                <li>
-                  <p id="image-box"><img id="post-image" src="#" alt=""></p>
-                </li>
+      
               </ul>
             </div>
           </div>
@@ -216,17 +151,17 @@
           id="sidebarMenu"
           class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
         >
-          <div class="sidebar-sticky pt-3">
+          <div class="sidebar-sticky pt-3" style="margin-top: -90px;">
             <h6>به چی علاقمند هستی ؟</h6>
             <ul class="nav flex-column" style="margin-left: 50px">
               <li class="nav-item">
-                <a class="nav-link active" href="Categories/Tech-tab.html" target="_blank"
+                <a class="nav-link active" href="Tech-tab.html"
                   ><i class="fas fa-laptop"></i> تکنالوجی
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Categories/Health-tab.html"target= "_blank"
+                <a class="nav-link" href="#"
                   ><i class="fas fa-heartbeat"></i>
                   سلامت
                 </a>
